@@ -1,0 +1,36 @@
+{
+  "department": "staff_behaviour",
+  "review_status": "needs_native_speaker_review",
+  "terms": [
+    {
+      "subtopic": "rude_conduct",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["rude", "impolite", "arrogant", "disrespectful", "attitude"],
+      "hi_script": ["बदतमीज", "घमंडी", "अशिष्ट"],
+      "gu_script": ["તોછડું", "ખરાબ વર્તન", "તોછડો વ્યવહાર"],
+      "romanized": ["rude", "tochhadu", "arrogant", "bad attitude"]
+    },
+    {
+      "subtopic": "misbehaviour",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["misbehave", "misbehavior", "misbehaved", "shouted", "arguing", "abuse"],
+      "hi_script": ["बदतमीज़ी", "दुर्व्यवहार", "गाली", "चिल्लाया"],
+      "gu_script": ["વર્તન", "દુર્વ્યવહાર", "ગાળ", "બૂમો પાડી"],
+      "romanized": ["misbehave", "vartan", "badtameezi", "badtamizi", "gaali", "durvyavhar", "bumo padi", "chilla raha"]
+    },
+    {
+      "subtopic": "refused_assistance",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["refused to help", "counter empty", "sleeping on duty", "no staff at counter", "unhelpful staff"],
+      "hi_script": ["मदद से मना", "काउंटर खाली", "स्टाफ गायब"],
+      "gu_script": ["મદદ કરવાની ના પાડી", "કાઉન્ટર ખાલી", "સ્ટાફ ગેરહાજર"],
+      "romanized": ["madad na padi", "counter khali", "staff gayab", "staff nathi", "refused help"]
+    }
+  ]
+}

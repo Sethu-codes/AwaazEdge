@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "departments": [
+    {
+      "id": "safety",
+      "name": "Safety & Security",
+      "baseUrgency": 40,
+      "subtopics": [
+        "fire",
+        "stampede",
+        "harassment",
+        "child_missing",
+        "unconscious",
+        "fell",
+        "stuck",
+        "help_needed",
+        "medical_emergency",
+        "assault",
+        "track_intrusion"
+      ]
+    },
+    {
+      "id": "lifts",
+      "name": "Lifts & Escalators",
+      "baseUrgency": 25,
+      "subtopics": [
+        "lift_stuck",
+        "lift_out_of_order",
+        "lift_door_jam",
+        "escalator_stopped",
+        "escalator_jerk",
+        "emergency_stop"
+      ]
+    },
+    {
+      "id": "staff_behaviour",
+      "name": "Staff Behaviour",
+      "baseUrgency": 20,
+      "subtopics": [
+        "rude_conduct",
+        "refused_assistance",
+        "verbal_abuse",
+        "misbehaviour",
+        "unattended_counter",
+        "bribe_demand"
+      ]
+    },
+    {
+      "id": "fare",
+      "name": "Fare & Ticketing",
+      "baseUrgency": 15,
+      "subtopics": [
+        "overcharged",
+        "refund_pending",
+        "ticket_machine_failure",
+        "smart_card_error",
+        "wrong_deduction",
+        "token_gate_jam"
+      ]
+    },
+    {
+      "id": "cleanliness",
+      "name": "Cleanliness & Sanitation",
+      "baseUrgency": 10,
+      "subtopics": [
+        "dirty_toilet",
+        "garbage_kachra",
+        "vomit_spill",
+        "water_leakage",
+        "bad_odor",
+        "pest_infestation"
+      ]
+    }
+  ],
+  "assetTypes": [
+    "lift",
+    "escalator",
+    "toilet",
+    "ticket_machine",
+    "platform",
+    "gate"
+  ],
+  "stations": [
+    { "id": "STN-01", "name": "Kalupur Railway Station", "code": "KLP", "line": "East-West" },
+    { "id": "STN-02", "name": "Thaltej", "code": "THL", "line": "East-West" },
+    { "id": "STN-03", "name": "Vastral Gam", "code": "VAS", "line": "East-West" },
+    { "id": "STN-04", "name": "Old High Court (Interchange)", "code": "OHC", "line": "Interchange" },
+    { "id": "STN-05", "name": "Motera Stadium", "code": "MOT", "line": "North-South" },
+    { "id": "STN-06", "name": "APMC", "code": "APM", "line": "North-South" },
+    { "id": "STN-07", "name": "Gandhinagar Sector 1", "code": "GN1", "line": "North-South" },
+    { "id": "STN-08", "name": "Paldi", "code": "PLD", "line": "North-South" },
+    { "id": "STN-09", "name": "Ranip", "code": "RNP", "line": "North-South" },
+    { "id": "STN-10", "name": "Apparel Park", "code": "APP", "line": "East-West" }
+  ],
+  "assets": [
+    { "id": "LIFT-01", "stationId": "STN-01", "assetType": "lift", "location": "Platform 1 Concourse East", "status": "active" },
+    { "id": "LIFT-02", "stationId": "STN-01", "assetType": "lift", "location": "Platform 2 Concourse West", "status": "active" },
+    { "id": "LIFT-03", "stationId": "STN-02", "assetType": "lift", "location": "Entry Gate A Ground", "status": "active" },
+    { "id": "LIFT-04", "stationId": "STN-03", "assetType": "lift", "location": "Concourse to Platform Level", "status": "active" },
+    { "id": "LIFT-05", "stationId": "STN-04", "assetType": "lift", "location": "Interchange North Core", "status": "active" },
+    { "id": "LIFT-06", "stationId": "STN-04", "assetType": "lift", "location": "Interchange South Core", "status": "active" },
+    { "id": "LIFT-07", "stationId": "STN-05", "assetType": "lift", "location": "Stadium Gate 2 Access", "status": "active" },
+    { "id": "LIFT-08", "stationId": "STN-08", "assetType": "lift", "location": "Concourse Main Lift", "status": "active" },
+    { "id": "ESC-01", "stationId": "STN-01", "assetType": "escalator", "location": "Entry 1 to Concourse", "status": "active" },
+    { "id": "ESC-02", "stationId": "STN-01", "assetType": "escalator", "location": "Concourse to PF 1 Up", "status": "active" },
+    { "id": "ESC-03", "stationId": "STN-02", "assetType": "escalator", "location": "Gate B to Mezzanine", "status": "active" },
+    { "id": "ESC-04", "stationId": "STN-04", "assetType": "escalator", "location": "Transfer East Corridor", "status": "active" },
+    { "id": "ESC-05", "stationId": "STN-04", "assetType": "escalator", "location": "Transfer West Corridor", "status": "active" },
+    { "id": "ESC-06", "stationId": "STN-05", "assetType": "escalator", "location": "Concourse to PF 2 Up", "status": "active" },
+    { "id": "ESC-07", "stationId": "STN-06", "assetType": "escalator", "location": "Main Entry Escalator", "status": "active" },
+    { "id": "ESC-08", "stationId": "STN-10", "assetType": "escalator", "location": "Platform Access Escalator", "status": "active" },
+    { "id": "TOI-01", "stationId": "STN-01", "assetType": "toilet", "location": "Concourse Restroom Block A", "status": "active" },
+    { "id": "TOI-02", "stationId": "STN-02", "assetType": "toilet", "location": "Unpaid Area Gate 1", "status": "active" },
+    { "id": "TOI-03", "stationId": "STN-03", "assetType": "toilet", "location": "Paid Area Platform 1", "status": "active" },
+    { "id": "TOI-04", "stationId": "STN-04", "assetType": "toilet", "location": "Interchange Central Restroom", "status": "active" },
+    { "id": "TOI-05", "stationId": "STN-05", "assetType": "toilet", "location": "Concourse Public Restroom", "status": "active" },
+    { "id": "TOI-06", "stationId": "STN-08", "assetType": "toilet", "location": "West Wing Restroom", "status": "active" },
+    { "id": "TVM-01", "stationId": "STN-01", "assetType": "ticket_machine", "location": "Ticket Counter Hall Kiosk 1", "status": "active" },
+    { "id": "TVM-02", "stationId": "STN-01", "assetType": "ticket_machine", "location": "Ticket Counter Hall Kiosk 2", "status": "active" },
+    { "id": "TVM-03", "stationId": "STN-02", "assetType": "ticket_machine", "location": "Gate A Automated Kiosk", "status": "active" },
+    { "id": "TVM-04", "stationId": "STN-04", "assetType": "ticket_machine", "location": "Interchange Hall Kiosk 1", "status": "active" },
+    { "id": "TVM-05", "stationId": "STN-05", "assetType": "ticket_machine", "location": "Stadium Entry TVM 1", "status": "active" },
+    { "id": "TVM-06", "stationId": "STN-07", "assetType": "ticket_machine", "location": "Main Entrance TVM", "status": "active" },
+    { "id": "PF-01", "stationId": "STN-01", "assetType": "platform", "location": "Platform 1 Eastbound", "status": "active" },
+    { "id": "PF-02", "stationId": "STN-01", "assetType": "platform", "location": "Platform 2 Westbound", "status": "active" },
+    { "id": "GATE-01", "stationId": "STN-01", "assetType": "gate", "location": "Automatic Fare Gate Entry 1-4", "status": "active" },
+    { "id": "GATE-02", "stationId": "STN-04", "assetType": "gate", "location": "Interchange Barrier Gate 1-8", "status": "active" }
+  ]
+}

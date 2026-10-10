@@ -1,0 +1,22 @@
+{
+  "name": "transit-triage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TransitTriage: Offline-first two-sided transit complaint triage platform",
+  "type": "module",
+  "bin": {
+    "triage": "./bin/triage.js"
+  },
+  "scripts": {
+    "triage": "tsx packages/core/src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "pnpm -r run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}

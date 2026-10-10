@@ -1,0 +1,46 @@
+{
+  "department": "lifts",
+  "review_status": "needs_native_speaker_review",
+  "terms": [
+    {
+      "subtopic": "lift",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["lift", "elevator", "lifts"],
+      "hi_script": ["लिफ्ट", "लिफ्ट में", "एलीवेटर"],
+      "gu_script": ["લિફ્ટ", "લિફ્ટમાં", "લિફ્ટની", "લિફ્ટે", "એલિવેટર"],
+      "romanized": ["lift", "elevator", "lifte"]
+    },
+    {
+      "subtopic": "escalator",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["escalator", "moving stairs", "escalators"],
+      "hi_script": ["एस्केलेटर", "स्वचालित सीढ़ी"],
+      "gu_script": ["એસ્કેલેટર", "સરકતી સીડી"],
+      "romanized": ["escalator", "eskalator", "sidi", "siridi"]
+    },
+    {
+      "subtopic": "lift_stuck",
+      "is_danger": true,
+      "danger_floor": 85,
+      "review_status": "needs_native_speaker_review",
+      "en": ["lift stuck", "elevator stuck", "lift stopped", "elevator trapped", "lift jammed"],
+      "hi_script": ["लिफ्ट बंद", "लिफ्ट अटक गई", "लिफ्ट फंस गई"],
+      "gu_script": ["લિફ્ટ બંધ", "લિફ્ટ અટકી", "લિફ્ટ ફસાઈ"],
+      "romanized": ["lift bandh", "lift atki", "lift fasai", "lift rokay", "lift stopped"]
+    },
+    {
+      "subtopic": "lift_door_jam",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["door not opening", "lift door jammed", "door stuck", "doors locked"],
+      "hi_script": ["दरवाजा नहीं खुला", "दरवाजा बंद", "दरवाजा जाम"],
+      "gu_script": ["દરવાજો ખૂલતો નથી", "દરવાજો બંધ", "બારણું બંધ"],
+      "romanized": ["darwajo nathi khulto", "darwaja bandh", "door open nathi", "darvajo jam"]
+    }
+  ]
+}

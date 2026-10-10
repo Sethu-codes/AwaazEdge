@@ -1,0 +1,86 @@
+{
+  "department": "safety",
+  "review_status": "needs_native_speaker_review",
+  "terms": [
+    {
+      "subtopic": "fire",
+      "is_danger": true,
+      "danger_floor": 95,
+      "review_status": "needs_native_speaker_review",
+      "en": ["fire", "smoke", "burning", "blaze", "flames"],
+      "hi_script": ["आग", "धुआं", "धुआँ", "जल रहा", "आग लगी"],
+      "gu_script": ["આગ", "ધુમાડો", "બળે છે", "સળગે છે"],
+      "romanized": ["aag", "dhuvado", "dhuwado", "dhua", "dhuan", "bale chhe", "salge chhe", "aag lagi"]
+    },
+    {
+      "subtopic": "stampede",
+      "is_danger": true,
+      "danger_floor": 95,
+      "review_status": "needs_native_speaker_review",
+      "en": ["stampede", "crowd crush", "rush", "overcrowded crush", "trampled"],
+      "hi_script": ["भगदड़", "भीड़", "कुचल"],
+      "gu_script": ["ભાગદોડ", "ભીડ", "કચડાઈ"],
+      "romanized": ["bhagdod", "bhagdaud", "bhid", "kachdai", "kuchal"]
+    },
+    {
+      "subtopic": "unconscious",
+      "is_danger": true,
+      "danger_floor": 95,
+      "review_status": "needs_native_speaker_review",
+      "en": ["unconscious", "fainted", "collapsed", "passed out"],
+      "hi_script": ["बेहोश", "बेहोशी", "गिरा पड़ा"],
+      "gu_script": ["બેભાન", "બેહોશ"],
+      "romanized": ["behosh", "bebhan", "faint", "behoshi"]
+    },
+    {
+      "subtopic": "child_missing",
+      "is_danger": true,
+      "danger_floor": 95,
+      "review_status": "needs_native_speaker_review",
+      "en": ["child lost", "child missing", "missing child", "kid lost", "lost kid"],
+      "hi_script": ["बच्चा गुम", "बच्चा खो गया", "बच्ची गायब"],
+      "gu_script": ["બાળક ખોવાયું", "બાળક ગુમ", "છોકરો ખોવાયો", "છોકરી ખોવાઈ"],
+      "romanized": ["baccho kho gayo", "bachha gum", "balak khovayu", "bacha kho gaya", "chhokro khovayo"]
+    },
+    {
+      "subtopic": "stuck",
+      "is_danger": true,
+      "danger_floor": 85,
+      "review_status": "needs_native_speaker_review",
+      "en": ["stuck", "trapped", "locked inside", "cannot get out"],
+      "hi_script": ["फंस गए", "फंस गया", "फंसी", "फंसे"],
+      "gu_script": ["ફસાઈ ગયા", "ફસાઈ ગયો", "ફસાયા", "અટવાઈ ગયા", "પુરાઈ ગયા"],
+      "romanized": ["fasai gaya", "fas gaya", "fasai gayo", "fas gaye", "atvai gaya", "purai gaya", "trapped"]
+    },
+    {
+      "subtopic": "harassment",
+      "is_danger": true,
+      "danger_floor": 85,
+      "review_status": "needs_native_speaker_review",
+      "en": ["harass", "harassment", "molest", "eve-teasing", "eve teasing", "groping", "assault"],
+      "hi_script": ["छेड़छाड़", "बदतमीजी", "छेड़ा"],
+      "gu_script": ["છેડતી", "હેરાનગતિ"],
+      "romanized": ["chhedchhad", "chedchad", "chhedti", "herangati", "molest", "groping"]
+    },
+    {
+      "subtopic": "fell",
+      "is_danger": true,
+      "danger_floor": 80,
+      "review_status": "needs_native_speaker_review",
+      "en": ["fell", "fallen", "fall down", "slip and fall", "tripped"],
+      "hi_script": ["गिर गया", "गिर गई", "गिर गए", "फिसल गया"],
+      "gu_script": ["પડી ગયા", "પડી ગયો", "પડી ગઈ", "લપસી પડ્યા"],
+      "romanized": ["padi gayo", "padi gaya", "padi gai", "gir gaya", "gir gayi", "gir gaye", "lapsi padya"]
+    },
+    {
+      "subtopic": "help",
+      "is_danger": false,
+      "danger_floor": 70,
+      "review_status": "needs_native_speaker_review",
+      "en": ["help", "save", "sos", "emergency", "assist immediately"],
+      "hi_script": ["बचाओ", "मदद", "सहायता"],
+      "gu_script": ["બચાવો", "મદદ", "સહાય"],
+      "romanized": ["bachao", "madad", "sahay", "help", "emergency"]
+    }
+  ]
+}

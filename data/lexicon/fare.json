@@ -1,0 +1,46 @@
+{
+  "department": "fare",
+  "review_status": "needs_native_speaker_review",
+  "terms": [
+    {
+      "subtopic": "overcharged",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["overcharged", "extra charge", "excess fare", "wrong amount deducted", "double deducted"],
+      "hi_script": ["ज्यादा पैसे", "अधिक किराया", "गलत कटौती", "दो बार कटा"],
+      "gu_script": ["વધારે પૈસા", "વધુ ભાડું", "ખોટા પૈસા કપાયા", "બે વાર કપાયા"],
+      "romanized": ["vadhare paisa", "zyada paise", "overcharged", "excess fare", "double deduction", "khota paisa"]
+    },
+    {
+      "subtopic": "refund",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["refund", "money return", "balance not credited", "paisa wapas"],
+      "hi_script": ["रिफंड", "पैसे वापस", "रुपये वापस"],
+      "gu_script": ["રિફંડ", "પૈસા પાછા", "રૂપિયા પાછા"],
+      "romanized": ["refund", "paisa vapas", "paisa pacha", "rupya pacha"]
+    },
+    {
+      "subtopic": "ticket_machine",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["ticket machine", "tvm", "token machine", "ticket counter", "smart card"],
+      "hi_script": ["टिकट मशीन", "टिकट", "टोकन", "स्मार्ट कार्ड"],
+      "gu_script": ["ટિકિટ મશીન", "ટિકિટ", "ટોકન", "સ્માર્ટ કાર્ડ"],
+      "romanized": ["ticket machine", "ticket", "token", "smart card", "tikit machine", "tikit"]
+    },
+    {
+      "subtopic": "fare",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["fare", "ticket price", "token cost"],
+      "hi_script": ["किराया", "भाड़ा"],
+      "gu_script": ["ભાડું", "ભાડા"],
+      "romanized": ["fare", "bhadu", "bhada", "kiraya"]
+    }
+  ]
+}

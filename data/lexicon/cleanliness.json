@@ -1,0 +1,46 @@
+{
+  "department": "cleanliness",
+  "review_status": "needs_native_speaker_review",
+  "terms": [
+    {
+      "subtopic": "dirty",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["dirty", "filthy", "unclean", "messy", "stain", "muddy", "cleanliness", "unhygienic", "clean"],
+      "hi_script": ["गंदा", "गंदी", "गंदगी", "मैला", "सफाई"],
+      "gu_script": ["ગંદુ", "ગંદી", "ગંદકી", "ખરાબ", "સફાઈ"],
+      "romanized": ["gandu", "gandi", "gandki", "gandagi", "ganda", "kharab", "maila", "safai"]
+    },
+    {
+      "subtopic": "garbage",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["garbage", "trash", "waste", "litter", "dustbin overflowing"],
+      "hi_script": ["कचरा", "कूड़ा", "कूड़ेदान"],
+      "gu_script": ["કચરો", "કચરાપેટી"],
+      "romanized": ["kachro", "kachra", "kuda", "kudedaad", "litter"]
+    },
+    {
+      "subtopic": "toilet",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["toilet", "washroom", "restroom", "urinal", "bathroom"],
+      "hi_script": ["शौचालय", "टॉयलेट", "मूत्रालय"],
+      "gu_script": ["શૌચાલય", "ટોયલેટ", "બાથરૂમ"],
+      "romanized": ["toilet", "washroom", "shauchalay", "bathroom", "mutralay"]
+    },
+    {
+      "subtopic": "odor_spill",
+      "is_danger": false,
+      "danger_floor": 0,
+      "review_status": "needs_native_speaker_review",
+      "en": ["smell", "stink", "foul smell", "odor", "vomit", "urine smell", "pan spit", "gutka"],
+      "hi_script": ["बदबू", "दुर्गंध", "उल्टी", "पान थूक"],
+      "gu_script": ["દુર્ગંધ", "વાસ", "ઉલટી", "પાનની પિચકારી"],
+      "romanized": ["badbu", "durgandh", "vaas", "ulti", "vomit", "pan thuk", "pichkari"]
+    }
+  ]
+}
