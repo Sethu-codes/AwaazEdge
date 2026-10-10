@@ -8,10 +8,11 @@
     "triage": "./bin/triage.js"
   },
   "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
     "triage": "tsx packages/core/src/cli.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "build": "pnpm -r run build",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

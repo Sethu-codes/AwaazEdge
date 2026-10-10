@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "TransitTriage",
+    "subtitle": "गुजरात मेट्रो रेल शिकायत निवारण",
+    "passengerSide": "यात्री पोर्टल",
+    "adminSide": "कंट्रोलर एडमिन",
+    "switchSide": "पोर्टल बदलें",
+    "online": "ऑनलाइन",
+    "offline": "ऑफलाइन",
+    "simulateOffline": "ऑफलाइन मोड चालू करें",
+    "pendingSync": "लंबित सिंक",
+    "lightMode": "लाइट",
+    "darkMode": "डार्क"
+  },
+  "passenger": {
+    "heading": "बताएं क्या समस्या हुई",
+    "helperText": "हम 24/7 शिकायतों पर नज़र रखते हैं। आपकी समस्या का तुरंत समाधान किया जाएगा।",
+    "placeholder": "समस्या का विवरण लिखें (उदा., 'लिफ्ट बंद हो गई', '5 मिनट में ट्रेन है', 'शौचालय में गंदगी है')...",
+    "stationLabel": "मेट्रो स्टेशन",
+    "stationPlaceholder": "स्टेशन चुनें...",
+    "assetLabel": "सुविधा / उपकरण",
+    "assetPlaceholder": "सुविधा चुनें (वैकल्पिक)...",
+    "scannedFromQR": "QR कोड द्वारा प्राप्त: {asset}",
+    "photoUpload": "फ़ोटो जोड़ें (वैकल्पिक)",
+    "voiceNote": "वॉयस नोट (जल्द आ रहा है)",
+    "contactHeading": "संपर्क विवरण (वैकल्पिक)",
+    "namePlaceholder": "आपका पूरा नाम",
+    "phonePlaceholder": "मोबाइल नंबर (+91)",
+    "consentCheckbox": "मैं इस नंबर पर SMS/WhatsApp अपडेट प्राप्त करने की सहमति देता हूँ।",
+    "submitButton": "शिकायत दर्ज करें",
+    "submitting": "दर्ज की जा रही है...",
+    "offlineNotice": "आप ऑफ़लाइन हैं। आपकी शिकायत सहेज ली गई है और ऑनलाइन होने पर तुरंत भेज दी जाएगी।",
+    "provisionalCategory": "अनंतिम श्रेणी",
+    "trackingId": "ट्रैकिंग आईडी",
+    "copied": "क्लिपबोर्ड पर कॉपी किया गया!",
+    "estimatedResponse": "अति आवश्यक मामलों में 15-30 मिनट के भीतर प्रतिक्रिया।",
+    "trackComplaint": "शिकायत ट्रैक करें",
+    "fileAnother": "दूसरी शिकायत दर्ज करें",
+    "timeline": {
+      "received": "प्राप्त हुई",
+      "reviewed": "कंट्रोलर द्वारा समीक्षित",
+      "replySent": "उत्तर भेजा गया",
+      "resolved": "समाधान हुआ"
+    },
+    "officialReply": "मेट्रो नियंत्रण कक्ष से आधिकारिक प्रतिक्रिया",
+    "pendingReview": "आपकी शिकायत दर्ज कर ली गई है और स्टेशन कंट्रोलर द्वारा समीक्षा की जा रही है।"
+  },
+  "admin": {
+    "sidebar": {
+      "triage": "ट्राइएज कतार",
+      "intake": "इंटेक और बैच",
+      "incidents": "इंसीडेंट्स",
+      "hotspots": "हॉटस्पॉट्स और हीटमैप",
+      "templates": "प्रतिक्रिया टेम्पलेट",
+      "model": "मॉडल और सुरक्षा",
+      "sync": "सिंक सेंटर"
+    },
+    "triage": {
+      "needsHumanLane": "मानवीय समीक्षा आवश्यक",
+      "needsHumanDesc": "लेक्सिकॉन अवर्गीकृत, निषेधात्मक शब्द मिला या भाषा अस्पष्ट",
+      "allTabs": "सभी",
+      "filterStation": "सभी स्टेशन",
+      "filterChannel": "सभी चैनल",
+      "filterBand": "सभी बैंड",
+      "filterStatus": "सभी स्थितियां",
+      "searchPlaceholder": "शिकायत या ट्रैकिंग ID खोजें... (j/k से नेविगेट करें)",
+      "table": {
+        "urgency": "प्राथमिकता",
+        "details": "शिकायत पूर्वावलोकन",
+        "station": "स्टेशन / सुविधा",
+        "channel": "चैनल",
+        "age": "समय और SLA",
+        "actions": "कार्रवाई"
+      }
+    },
+    "detail": {
+      "title": "शिकायत विवरण",
+      "originalText": "मूल शिकायत विवरण",
+      "normalizedText": "सामान्यीकृत विवरण",
+      "triggerWords": "पहचाने गए मुख्य शब्द",
+      "detectedLang": "भाषा और लिपि",
+      "confidenceBars": "विभाग वर्गीकरण संभावना",
+      "urgencyBreakdown": "प्राथमिकता अंक विवरण",
+      "overrideUrgency": "प्राथमिकता बदलें",
+      "moveQueue": "विभाग बदलें",
+      "replyEditor": "आधिकारिक उत्तर तैयार करें",
+      "approve": "उत्तर स्वीकृत करें",
+      "send": "यात्री को भेजें",
+      "auditTrail": "ऑडिट हिस्ट्री",
+      "learnedToast": "सिस्टम ने आपके सुधार से सीख लिया!"
+    }
+  }
+}

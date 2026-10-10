@@ -133,3 +133,145 @@ Typechecking:
 ```bash
 pnpm typecheck
 ```
+
+---
+
+## Web Application (`apps/web`)
+
+A production-grade, offline-first, dual-sided Single Page Application built with **React 18 + Vite + TypeScript + Tailwind CSS + Zustand + Dexie IndexedDB + Lucide React + Recharts + i18next**.
+
+Running on **`http://localhost:5173/`**
+
+### Two-Sided Portals
+
+1. **Passenger Portal (`/app`)**:
+   - **Mobile-first** layout with generous touch targets (min 44px) and clear status indicators.
+   - **QR deep-linking**: Pre-populates station and asset from URL query parameters (e.g. `?station=STN-01&asset=LIFT-03`).
+   - **Multilingual submission**: Gujarati script, Devanagari script, English, and Romanized Gujlish.
+   - **Ticket Tracker (`/app/track/:id`)**: Live timeline (Submitted $\to$ Triaged $\to$ Assigned $\to$ In Progress $\to$ Resolved).
+   - **Privacy & Trust Guarantee**: Never exposes internal urgency scores, algorithmic triage lanes, or internal department tags to passengers.
+
+2. **Station Controller & Admin Portal (`/admin`)**:
+   - **Desktop/Tablet control-room interface** styled in calm neutral slate surfaces with deep teal (`#0D9488`) accent.
+   - **Triage Queue (`/admin/triage`)**:
+     - Pinned **"Needs human eyes"** lane at the top for ambiguous cases, negation flags, and zero-match input.
+     - Automated triage queue sorted by deterministic Urgency Score (0–100).
+     - Filter chips by department, urgency band (Critical, High, Medium, Low), and search terms.
+   - **Complaint Detail Drawer**:
+     - Highlights trigger words in original script with color-coded offsets.
+     - Full urgency breakdown card displaying base score, triggered danger floor, and accumulated modifiers.
+     - One-click Department re-assignment & Urgency override.
+     - Complainant draft response editor populated with verified multilingual templates and personalized placeholders (`{{station}}`, `{{asset}}`, `{{tracking_id}}`).
+     - "Approve & Send Draft" action tracking controller approvals.
+   - **Intake & Batch Paste (`/admin/intake`)**:
+     - Direct text submission or multi-line batch complaints paste.
+     - Live dry-run classification preview before ingestion into the triage system.
+   - **Incidents & Clustering (`/admin/incidents`)**:
+     - Groups complaints sharing the same station, asset/department, and within a 6-hour sliding window with Jaccard word similarity $\ge 0.4$.
+     - One-click "Bulk Action" to acknowledge and resolve co-occurring complaints.
+   - **Hotspots Heatmap & Analytics (`/admin/hotspots`)**:
+     - 10 Station $\times$ 5 Department CSS grid matrix with deep teal/amber/rose intensity shading.
+     - Chronic repeat-offender asset badges (e.g. `LIFT-03` at Paldi, `ESC-01` at Kalupur).
+     - Daily complaint trend line charts powered by Recharts.
+   - **Templates Management (`/admin/templates`)**:
+     - Station response templates across Gujarati, Hindi, and English with placeholder token validation.
+   - **Model & Safety Configuration (`/admin/model`)**:
+     - Interactive Cost-Benefit decision matrix sliders ($C_{\text{miss}}$ vs $C_{\text{false}}$) dynamically recomputing the Bayes optimal threshold $\tau = \frac{C_{\text{false}}}{C_{\text{miss}} + C_{\text{false}}}$.
+     - Real-time simulation showing expected triage volume vs safety-miss rate.
+     - Architecture hook for future ONNX runtime integration.
+   - **Sync Center (`/admin/sync`)**:
+     - Visual IndexedDB event journal (complaint creation, department overrides, draft approvals).
+     - Online/Offline simulated link toggle with manual and automatic drain of the ULID-ordered outbox.
+
+---
+
+## Demo Walkthrough Script
+
+Follow these 6 steps to experience the complete end-to-end functionality of TransitTriage:
+
+### Step 1: Submit a Gujlish Complaint on `/app`
+1. Navigate to **`http://localhost:5173/app`** (or click the **Passenger Portal** link in the header).
+2. Note the pre-populated or selectable station: **Paldi (STN-02)** and asset **LIFT-03 (Elevator)**.
+3. Paste the following authentic Gujlish complaint into the grievance box:
+   ```text
+   lift ma fasai gaya, ek vrudh chhe, 5 minute ma train chhe
+   ```
+4. Enter optional phone `9876543210` and click **"Submit Complaint"**.
+5. You will see the confirmation screen with a generated Tracking ID (e.g. `TRX-XXXXXX`) and a passenger timeline. Notice that internal urgency points and triage lanes are strictly hidden from this passenger view.
+
+### Step 2: Observe at Top of `/admin` with Stuck-Floor 85 and Modifiers
+1. Click the header portal switcher to jump to **Station Controller (`/admin`)**.
+2. On the **Triage Queue** tab, the newly submitted complaint appears at the very top of the automated queue with **Urgency Score 100/100** and a bright red `[CRITICAL]` badge.
+3. Click the complaint card to open the **Detail Drawer**:
+   - **Trigger Words**: Note `"lift"` highlighted in purple and `"fasai gaya"` highlighted in red.
+   - **Urgency Breakdown**:
+     - Base (safety): **+40 pts**
+     - Danger floor (stuck): **85 pts**
+     - Modifier (Vulnerable Person - elderly): **+10 pts**
+     - Modifier (Time Pressure - 5 min train): **+10 pts**
+     - Total: **100 pts (Capped at 100)**
+   - **Draft Response**: The system automatically drafts a Gujarati/Gujlish response using the emergency template with station and tracking placeholders populated.
+
+### Step 3: Toggle Offline Mode & Import Batch via Intake Tab
+1. In the top navigation bar, toggle the **Network status switch** from `Online` to **`Offline`** (an amber offline indicator appears).
+2. Click the **"Intake"** tab in the admin navigation.
+3. Scroll down to **"Batch Paste Intake"** and click **"Load Realistic Gujarat Metro Batch"** (loads 4 multilingual complaints across Gujarati script, Hindi, and Gujlish).
+4. Click **"Run Dry-Run Preview"** to inspect how the rules engine classifies them.
+5. Click **"Ingest 4 Complaints"**. All 4 complaints are triaged instantly and stored in local **Dexie IndexedDB** without needing an active internet connection.
+
+### Step 4: Correct a Label in Drawer & Observe "Learned from your correction"
+1. Return to the **"Triage Queue"** tab.
+2. Open any complaint (e.g. a complaint currently labeled `cleanliness`).
+3. Under **"Quick Actions"** in the drawer, click **"Move to Lifts"** or **"Move to Safety"**.
+4. Click the **"Learn & Update Rule"** button.
+5. A confirmation badge appears: **"Learned from your correction: kNN / Lexicon updated"** and a green toast notification confirms the change has been recorded into the offline event journal.
+
+### Step 5: Disable Offline Mode & Watch the Sync Progress
+1. Click the **"Sync Center"** tab in the admin navigation.
+2. Notice the **Pending Outbox** counter showing the queued sync mutations (complaint creations, overrides, draft approvals).
+3. In the header, toggle the network status switch back to **`Online`**.
+4. Click **"Drain Outbox Now"** (or watch the simulated automatic background sync).
+5. Watch the sync progress bar complete, transitioning pending events into the permanent synced journal.
+
+### Step 6: Open Hotspots to View Heatmap & Repeat Offenders
+1. Click the **"Hotspots"** tab in the admin navigation.
+2. View the **Station $\times$ Department CSS grid heatmap**:
+   - Notice the high-density cell at **Paldi $\times$ Lifts** (chronic escalator/lift issues).
+   - Notice the high-density cell at **Kalupur (Railway Station) $\times$ Safety** (congestion & ticketing machines).
+3. Scroll down to **"Chronic Repeat Offenders"** to see specific problematic assets like **LIFT-03** flagged with maintenance alerts.
+4. Review the 7-day complaint volume trend line chart at the bottom.
+
+---
+
+## Project Structure
+
+```
+transit-triage/
+├── apps/
+│   └── web/                   # Vite + React 18 + TypeScript + Tailwind SPA
+│       ├── src/
+│       │   ├── core/          # Interfaces (Classifier, SyncService, Cluster)
+│       │   ├── db/            # Dexie.js IndexedDB schema & event log
+│       │   ├── store/         # Zustand global application state
+│       │   ├── components/    # Header, DetailDrawer, UrgencyBadge, Toasts
+│       │   ├── pages/         # /app (Submit, Track) and /admin (7 views)
+│       │   ├── mock/          # Seeded complaints, stations, assets, templates
+│       │   └── i18n/          # Locales for English, Gujarati, Hindi
+│       └── tailwind.config.js
+├── packages/
+│   └── core/                  # Deterministic Rules Engine (Zero external deps)
+│       ├── src/
+│       │   ├── normalize.ts   # NFC, Indic script detection, digit mapping
+│       │   ├── lexicon.ts     # Boundary matcher, offset finder, negation logic
+│       │   ├── urgency.ts     # Base + Floor + Modifiers score calculator
+│       │   ├── safety-cost.ts # Bayes minimum risk decision matrix
+│       │   ├── triage.ts      # End-to-end classifier & lane router
+│       │   └── cli.ts         # Standalone CLI tool
+│       └── __tests__/         # 84 Vitest unit tests
+├── data/
+│   ├── taxonomy.json          # Departments, subtopics, stations, assets
+│   ├── lexicon/               # 5 department JSON lexicons in 4 forms
+│   └── templates/             # Approved multilingual response templates
+└── package.json
+```
+

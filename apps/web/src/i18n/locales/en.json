@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "TransitTriage",
+    "subtitle": "Gujarat Metro Rail Grievance Redressal",
+    "passengerSide": "Passenger Portal",
+    "adminSide": "Controller Admin",
+    "switchSide": "Switch Portal",
+    "online": "ONLINE",
+    "offline": "OFFLINE",
+    "simulateOffline": "Simulate Offline",
+    "pendingSync": "Pending sync",
+    "lightMode": "Light",
+    "darkMode": "Dark"
+  },
+  "passenger": {
+    "heading": "Tell us what went wrong",
+    "helperText": "We monitor reports 24/7. Your complaint will be prioritized immediately.",
+    "placeholder": "Describe what happened (e.g., 'lift stopped at concourse', '5 minute ma train chhe', 'प्लेटफॉर्म पर गंदगी है')...",
+    "stationLabel": "Metro Station",
+    "stationPlaceholder": "Select Station...",
+    "assetLabel": "Facility / Asset",
+    "assetPlaceholder": "Select Facility (optional)...",
+    "scannedFromQR": "Scanned from QR: {asset}",
+    "photoUpload": "Attach Photo (Optional)",
+    "voiceNote": "Voice Note (Coming soon)",
+    "contactHeading": "Contact Information (Optional)",
+    "namePlaceholder": "Your Full Name",
+    "phonePlaceholder": "Mobile Number (+91)",
+    "consentCheckbox": "I consent to receiving resolution SMS/WhatsApp updates on this number.",
+    "submitButton": "Submit Complaint",
+    "submitting": "Submitting...",
+    "offlineNotice": "You're offline. We'll queue your complaint and send it automatically once connected.",
+    "provisionalCategory": "Provisional Category",
+    "trackingId": "Tracking ID",
+    "copied": "Copied to clipboard!",
+    "estimatedResponse": "Estimated response within 15-30 minutes for urgent matters.",
+    "trackComplaint": "Track this complaint",
+    "fileAnother": "File another grievance",
+    "timeline": {
+      "received": "Received",
+      "reviewed": "Reviewed by Controller",
+      "replySent": "Reply Sent",
+      "resolved": "Resolved"
+    },
+    "officialReply": "Official Response from Metro Operations",
+    "pendingReview": "Your grievance has been logged and is under active review by the Station Controller."
+  },
+  "admin": {
+    "sidebar": {
+      "triage": "Triage Queue",
+      "intake": "Intake & Batch",
+      "incidents": "Incidents",
+      "hotspots": "Hotspots & Heatmap",
+      "templates": "Response Templates",
+      "model": "Model & Safety",
+      "sync": "Sync Center"
+    },
+    "triage": {
+      "needsHumanLane": "Needs Human Eyes",
+      "needsHumanDesc": "Lexicon unclassified, negation flagged, or language ambiguous",
+      "allTabs": "All",
+      "filterStation": "All Stations",
+      "filterChannel": "All Channels",
+      "filterBand": "All Bands",
+      "filterStatus": "All Statuses",
+      "searchPlaceholder": "Search complaints or tracking ID... (Press j/k to navigate)",
+      "table": {
+        "urgency": "Urgency",
+        "details": "Complaint Preview",
+        "station": "Station / Asset",
+        "channel": "Channel",
+        "age": "Age & SLA",
+        "actions": "Actions"
+      }
+    },
+    "detail": {
+      "title": "Complaint Detail",
+      "originalText": "Original Complaint Text",
+      "normalizedText": "Normalized Text",
+      "triggerWords": "Detected Trigger Words",
+      "detectedLang": "Language & Script",
+      "confidenceBars": "Department Classifications",
+      "urgencyBreakdown": "Urgency Score Breakdown",
+      "overrideUrgency": "Override Urgency",
+      "moveQueue": "Move Department",
+      "replyEditor": "Draft Official Response",
+      "approve": "Approve Response",
+      "send": "Send to Complainant",
+      "auditTrail": "Audit Trail",
+      "learnedToast": "Learned from your correction!"
+    }
+  }
+}

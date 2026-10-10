@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "TransitTriage",
+    "subtitle": "ગુજરાત મેટ્રો રેલ ફરિયાદ નિવારણ",
+    "passengerSide": "મુસાફર પોર્ટલ",
+    "adminSide": "કંટ્રોલર એડમિન",
+    "switchSide": "પોર્ટલ બદલો",
+    "online": "ઓનલાઇન",
+    "offline": "ઓફલાઇન",
+    "simulateOffline": "ઓફલાઇન મોડ ચાલુ કરો",
+    "pendingSync": "બાકી સિંક",
+    "lightMode": "લાઇટ",
+    "darkMode": "ડાર્ક"
+  },
+  "passenger": {
+    "heading": "તમને શું તકલીફ પડી તે જણાવો",
+    "helperText": "અમે ૨૪/૭ ફરિયાદો પર નજર રાખીએ છીએ. તમારી સમસ્યા તાત્કાલિક ઉકેલાશે.",
+    "placeholder": "સમસ્યાનું વર્ણન કરો (દા.ત., 'લિફ્ટ બંધ છે', '૫ મિનિટમાં ટ્રેન છે', 'પ્લેટફોર્મ પર ગંદકી છે')...",
+    "stationLabel": "મેટ્રો સ્ટેશન",
+    "stationPlaceholder": "સ્ટેશન પસંદ કરો...",
+    "assetLabel": "સુવિધા / સાધન",
+    "assetPlaceholder": "સુવિધા પસંદ કરો (વૈકલ્પિક)...",
+    "scannedFromQR": "QR કોડ દ્વારા મળેલ: {asset}",
+    "photoUpload": "ફોટો જોડો (વૈકલ્પિક)",
+    "voiceNote": "વૉઇસ નોટ (ટૂંક સમયમાં)",
+    "contactHeading": "સંપર્ક માહિતી (વૈકલ્પિક)",
+    "namePlaceholder": "તમારું પૂરું નામ",
+    "phonePlaceholder": "મોબાઇલ નંબર (+91)",
+    "consentCheckbox": "હું આ નંબર પર SMS/WhatsApp અપડેટ્સ મેળવવા સંમત છું.",
+    "submitButton": "ફરિયાદ નોંધાવો",
+    "submitting": "નોંધણી ચાલુ છે...",
+    "offlineNotice": "તમે ઓફલાઇન છો. ફરિયાદ સ્થાનિક રીતે સાચવવામાં આવી છે અને ઓનલાઇન થતાં જ મોકલાશે.",
+    "provisionalCategory": "કામચલાઉ વિભાગ",
+    "trackingId": "ટ્રેકિંગ આઈડી",
+    "copied": "ક્લિપબોર્ડ પર કોપી થયું!",
+    "estimatedResponse": "તાકીદના કેસો માટે અંદાજિત ૧૫-૩૦ મિનિટમાં પ્રતિસાદ.",
+    "trackComplaint": "ફરિયાદ ટ્રેક કરો",
+    "fileAnother": "બીજી ફરિયાદ નોંધાવો",
+    "timeline": {
+      "received": "મળેલ",
+      "reviewed": "કંટ્રોલર દ્વારા ચકાસાયેલ",
+      "replySent": "જવાબ મોકલાયો",
+      "resolved": "ઉકેલાયેલ"
+    },
+    "officialReply": "મેટ્રો કંટ્રોલ રૂમનો સત્તાવાર જવાબ",
+    "pendingReview": "તમારી ફરિયાદ નોંધાઈ છે અને સ્ટેશન કંટ્રોલર દ્વારા તેની ચકાસણી ચાલી રહી છે."
+  },
+  "admin": {
+    "sidebar": {
+      "triage": "ટ્રાયજ કતાર",
+      "intake": "ઇનટેક અને બેચ",
+      "incidents": "ઇન્સિડન્ટ્સ",
+      "hotspots": "હોટસ્પોટ્સ અને હીટમેપ",
+      "templates": "પ્રતિસાદ ટેમ્પલેટ",
+      "model": "મોડેલ અને સુરક્ષા",
+      "sync": "સિંક સેન્ટર"
+    },
+    "triage": {
+      "needsHumanLane": "માનવીય ચકાસણી જરૂરી",
+      "needsHumanDesc": "લેક્સિકોન વર્ગીકૃત નથી, નકારાત્મક શબ્દ મળ્યો અથવા ભાષા અસ્પષ્ટ",
+      "allTabs": "બધા",
+      "filterStation": "બધા સ્ટેશનો",
+      "filterChannel": "બધી ચેનલો",
+      "filterBand": "બધા બેન્ડ",
+      "filterStatus": "બધા સ્ટેટસ",
+      "searchPlaceholder": "ફરિયાદ અથવા ટ્રેકિંગ ID શોધો... (j/k વડે નેવિગેટ કરો)",
+      "table": {
+        "urgency": "તાકીદ",
+        "details": "ફરિયાદ પૂર્વાવલોકન",
+        "station": "સ્ટેશન / સાધન",
+        "channel": "ચેનલ",
+        "age": "સમય અને SLA",
+        "actions": "ક્રિયાઓ"
+      }
+    },
+    "detail": {
+      "title": "ફરિયાદ વિગત",
+      "originalText": "મૂળ ફરિયાદ લખાણ",
+      "normalizedText": "સામાન્યકૃત લખાણ",
+      "triggerWords": "પકડાયેલા મુખ્ય શબ્દો",
+      "detectedLang": "ભાષા અને લિપિ",
+      "confidenceBars": "વિભાગ સંભાવના",
+      "urgencyBreakdown": "તાકીદ ગુણ વિગત",
+      "overrideUrgency": "તાકીદ બદલો",
+      "moveQueue": "વિભાગ બદલો",
+      "replyEditor": "સત્તાવાર જવાબ ડ્રાફ્ટ કરો",
+      "approve": "જવાબ મંજૂર કરો",
+      "send": "મુસાફરને મોકલો",
+      "auditTrail": "ઓડિટ હિસ્ટ્રી",
+      "learnedToast": "તમારા સુધારામાંથી સિસ્ટમે શીખ્યું!"
+    }
+  }
+}
