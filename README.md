@@ -1,4 +1,4 @@
-# TransitTriage
+# AwaazEdge (TransitTriage)
 
 > **Offline-first two-sided transit complaint triage platform** (PWA + FastAPI + SQLite).
 > Multilingual, multi-label complaint processing across Gujarati script, Devanagari (Hindi), English, and Romanized "Gujlish" / "Hinglish".
